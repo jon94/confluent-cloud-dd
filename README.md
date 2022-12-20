@@ -7,7 +7,10 @@ To get endpoint for minikube
 ```
 minikube service dep --url
 ```
-
+Image locally built and pushed to dockerhub
+```
+https://hub.docker.com/repository/docker/jonathanlim799/kafkapoc
+```
 ### Keda
 Reference: 
 - https://keda.sh/docs/2.7/deploy/
