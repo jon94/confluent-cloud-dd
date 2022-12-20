@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: dep
+  name: dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dep
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: dep
+    spec:
+      containers:
+      - image: jonathanlim799/kafkapoc:latest
+        name: keda-poc
+        resources:
+          limits:
+            cpu: 500m
+            memory: 512Mi
+          requests:
+            cpu: 500m
+            memory: 512Mi
+status: {}
