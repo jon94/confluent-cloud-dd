@@ -60,7 +60,3 @@ while true; do sleep 1; curl http://127.0.0.1:XXXX/api/produce; echo -e '\n\n\n\
 ![image](https://user-images.githubusercontent.com/40360784/208808481-e9588e96-17cf-43c8-b711-387b32c86d69.png)
 ![image](https://user-images.githubusercontent.com/40360784/208808538-e557bd6f-8381-436e-ac71-d044cda1f857.png)
 ![image](https://user-images.githubusercontent.com/40360784/208808582-802fc810-00ef-475d-8f41-f854eecc7249.png)
-
-
-
-##### Datadog Dashboard
