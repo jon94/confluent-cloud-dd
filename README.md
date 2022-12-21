@@ -45,12 +45,22 @@ while true; do sleep 1; curl http://127.0.0.1:XXXX/api/produce; echo -e '\n\n\n\
 ##### Confluent Cloud Message Lag
 ![Billing   payment - Confluent Cloud 2022-12-21 at 10 29 10 AM](https://user-images.githubusercontent.com/40360784/208806978-7bc611a3-a7b5-486d-9b8d-11d29a8e038d.jpg)
 
-##### Datadog Metrics
+##### Datadog Dashboard
 - Observe that there is some lag when Datadog is obtaining these metrics from Confluent Cloud. (?) There must be some settings to increase the scrap frequency.
 ![image](https://user-images.githubusercontent.com/40360784/208806926-d0df0faf-601f-45d2-b386-24c13d463ed8.png)
 
 ##### Pods get autoscaled by KEDA HPA when lag > 50 (as per settings in manifest)
 ![jonathan lim — kubectl get po -w — 214×64 2022-12-21 at 10 35 22 AM](https://user-images.githubusercontent.com/40360784/208807211-8da119a2-42ed-44d4-9038-858c0cb4da98.jpg)
+
 ##### Pods get scaled down by KEDA HPA to 1 when lag is back to healthy range
 ![image](https://user-images.githubusercontent.com/40360784/208808247-b93d6662-865f-47b6-b365-5c2e9ca8c46a.png)
 ![image](https://user-images.githubusercontent.com/40360784/208808302-7d5eed1c-af09-490d-8cc7-e90df2b10b7a.png)
+
+##### Datadog Dashboard
+![image](https://user-images.githubusercontent.com/40360784/208808481-e9588e96-17cf-43c8-b711-387b32c86d69.png)
+![image](https://user-images.githubusercontent.com/40360784/208808538-e557bd6f-8381-436e-ac71-d044cda1f857.png)
+![image](https://user-images.githubusercontent.com/40360784/208808582-802fc810-00ef-475d-8f41-f854eecc7249.png)
+
+
+
+##### Datadog Dashboard
