@@ -36,6 +36,14 @@ helm install keda kedacore/keda --namespace keda
 ## Observations
 ### Kafka
 #### Case 1: Using Datadog to correlate KEDA HPA and Consumer Lag 
+- Followed documentation to link Confluent Cloud to Datadog with API Key owned by Service Account with Metrics Viewer Role https://docs.datadoghq.com/integrations/confluent_cloud/#overview
 ```
 while true; do sleep 1; curl http://127.0.0.1:XXXX/api/produce; echo -e '\n\n\n\n'$(date);done
 ```
+##### Confluent Cloud Message Lag
+![Billing   payment - Confluent Cloud 2022-12-21 at 10 29 10 AM](https://user-images.githubusercontent.com/40360784/208806978-7bc611a3-a7b5-486d-9b8d-11d29a8e038d.jpg)
+##### Datadog Metrics
+Observe that there is some lag when Datadog is obtaining these metrics from Confluent Cloud
+![image](https://user-images.githubusercontent.com/40360784/208806926-d0df0faf-601f-45d2-b386-24c13d463ed8.png)
+##### Pods get autoscaled by KEDA HPA when lag > 50 (as per settings in manifest)
+![jonathan lim — kubectl get po -w — 214×64 2022-12-21 at 10 35 22 AM](https://user-images.githubusercontent.com/40360784/208807211-8da119a2-42ed-44d4-9038-858c0cb4da98.jpg)
