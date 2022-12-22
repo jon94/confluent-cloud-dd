@@ -1,5 +1,8 @@
 # confluent-cloud-dd
 
+## Motivation
+The standard HPA settings support only CPU/Memory type of autoscaling. It might be useful to sometimes scale on external metrics. In the case of Kafka - Consumer Lag is one of them.
+
 ## Set Up
 
 ### Docker
