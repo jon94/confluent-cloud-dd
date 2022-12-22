@@ -4,7 +4,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"confluent-keda-poc/controllers"
+	"confluent-cloud-dd/controllers"
 )
 
 
