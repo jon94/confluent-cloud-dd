@@ -5,6 +5,7 @@ go 1.19
 require (
 	github.com/confluentinc/confluent-kafka-go v1.9.2
 	github.com/gin-gonic/gin v1.8.1
+  	gopkg.in/DataDog/dd-trace-go.v1/ddtrace/tracer
 )
 
 require (
