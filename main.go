@@ -5,10 +5,15 @@ import (
 	"github.com/gin-gonic/gin"
 
 	"confluent-cloud-dd/controllers"
+	
+    	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace/tracer"	
 )
 
 
 func main() {
+        tracer.Start(tracer.WithDebugMode(true))
+        defer tracer.Stop()
+	
 	// Set the router as the default one shipped with Gin
 	router := gin.Default()
 
